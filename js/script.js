@@ -1,13 +1,13 @@
 const btn1 = document.getElementById('btn1');
 
 const rainbow = [
-    "#9400D3",
-    "#4B0082",
-    "#0000FF",
-    "#00FF00",
-    "#FFFF00",
-    "#FF7F00",
-    "#FF0000",
+    "#FFD3A3",
+    "#A084E8",
+    "#D0BFFF",
+    "#BEADFA",
+    "#FF55BB",
+    "#DFCCFB",
+    "#DD58D6",
 ];
 
 btn1.innerText = 'Colorizar';
