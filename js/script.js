@@ -27,9 +27,10 @@ let newBackgroundColor = "";
 let newPrimaryColor = "";
 btn2.addEventListener('click', () => {
     newBackgroundColor = darkMode? "rgb(240,240,240)" : "rgb(29, 27, 31)";
+    newPrimaryColor = darkMode? "black": "white";
     darkMode = !darkMode;
 
     document.body.style.backgroundColor = newBackgroundColor;
-    
+    document.body.style.color = newPrimaryColor;
     btn2.innerText = `Modo ${darkMode? "Claro" : "Escuro"}`;
 });
