@@ -35,3 +35,9 @@ btn2.addEventListener('click', () => {
     btn2.innerText = `Modo ${darkMode? "Claro" : "Escuro"}`;
 });
 
+const confetti = new JSConfetti()
+btn3.addEventListener('click', () => {
+    confetti.addConfetti({
+        emojis: ['L']
+    })
+});
