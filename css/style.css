@@ -15,7 +15,7 @@ body{
     color: var(--primary-color);
     display: flex;
     justify-content: center;
-    background-color: var(--bg-color)
+    background-color: var(--bg-color);
     margin: 40px;
 }
 
