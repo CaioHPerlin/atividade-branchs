@@ -49,6 +49,7 @@ button{
     margin-bottom: 40px;
 }
 
-#hoveringBtn{
-    
+#hoveringBtn:hover{
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
 }
