@@ -1,4 +1,9 @@
-
+:root{
+    --font: monospace;
+    --bg-color: rgb(29, 27, 31);
+    --primary-color: white;
+    --secondary-color: var(--secondary-color);;
+}
 
 *{
     margin: 0;
@@ -7,10 +12,10 @@
 
 body{
     font-family: monospace;
-    color: white;
+    color: var(--primary-color);
     display: flex;
     justify-content: center;
-    background-color: rgb(29, 27, 31);
+    background-color: var(--bg-color)
     margin: 40px;
 }
 
@@ -37,8 +42,8 @@ button{
     cursor: pointer;
     border-radius: 10px;
     padding: 10px;
-    border: 2px solid white;
-    color: white;
-    background-color: black;
+    border: 2px solid var(--primary-color);;
+    color: var(--primary-color);;
+    background-color: var(--secondary-color);;
     transition: all 0.5s;
 }
