@@ -12,9 +12,9 @@
 ## Atividade 2
 
 ✔️ - Adicionar um colega como colaborador  
-❌ - Realizar a atividade de correção de 3 bugs  
+✔️ - Realizar a atividade de correção de 3 bugs  
 ✔️ - Cada bugfix deve ser feito em um branch  
-❌ - Ao final fazer o pull-request de cada funcionalidade no branch principal e colocar um colega como revisor do código  
+✔️ - Ao final fazer o pull-request de cada funcionalidade no branch principal e colocar um colega como revisor do código  
 ✔️ - O nome do branch deve seguir o padrão bugfix/nome-da-funcionalidade
 
 ## Atividade 3
