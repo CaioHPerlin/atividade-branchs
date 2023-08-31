@@ -1,8 +1,3 @@
-const btn1 = document.getElementById('btn1');
-const btn2 = document.getElementById('btn2');
-const btn3 = document.getElementById('btn3');
-let darkMode = true;
-
 const rainbow = [
     "#FFD3A3",
     "#A084E8",
@@ -12,32 +7,33 @@ const rainbow = [
     "#DFCCFB",
     "#DD58D6",
 ];
-
 let currentColor = 0;
-btn1.addEventListener('click', () => setInterval(() => {
-    btn1.style.color = `${rainbow[currentColor]}`;
-    btn1.style.borderColor = `${rainbow[currentColor]}`;
+const colorizeElement = (element) => setInterval(() => {
+    element.style.color = `${rainbow[currentColor]}`;
+    element.style.borderColor = `${rainbow[currentColor]}`;
     currentColor++; 
     if (currentColor == rainbow.length-1) {
         currentColor = 0;
     }
-}, 350));
+}, 350)
 
+let darkMode = true;
 let newBackgroundColor = "";
 let newPrimaryColor = "";
-btn2.addEventListener('click', () => {
+const changeTheme = (output) => {
     newBackgroundColor = darkMode? "rgb(240,240,240)" : "rgb(29, 27, 31)";
     newPrimaryColor = darkMode? "black": "white";
     darkMode = !darkMode;
 
     document.body.style.backgroundColor = newBackgroundColor;
     document.body.style.color = newPrimaryColor;
-    btn2.innerText = `Modo ${darkMode? "Claro" : "Escuro"}`;
-});
+    output.innerText = `Modo ${darkMode? "Claro" : "Escuro"}`;
+}
 
-const confetti = new JSConfetti()
-btn3.addEventListener('click', () => {
-    confetti.addConfetti({
-        emojis: ['L']
-    })
-});
+const JsConfetti = new JSConfetti()
+
+const buttons = document.getElementsByTagName('button');
+
+buttons[0].addEventListener('click', () => colorizeElement(buttons[0]));
+buttons[1].addEventListener('click', () => changeTheme(buttons[1]));
+buttons[2].addEventListener('click', () => JsConfetti.addConfetti());
