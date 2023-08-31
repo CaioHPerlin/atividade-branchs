@@ -30,10 +30,14 @@ const changeTheme = (output) => {
     output.innerText = `Modo ${darkMode? "Claro" : "Escuro"}`;
 }
 
-const JsConfetti = new JSConfetti()
+const greetUser = () => {
+    document.getElementsByTagName('h2')[0].innerText = darkMode? "Boa Noite!" : "Bom Dia!"
+}
 
+const JsConfetti = new JSConfetti()
 const buttons = document.getElementsByTagName('button');
 
 buttons[0].addEventListener('click', () => colorizeElement(buttons[0]));
 buttons[1].addEventListener('click', () => changeTheme(buttons[1]));
 buttons[2].addEventListener('click', () => JsConfetti.addConfetti());
+buttons[3].addEventListener('click', () => greetUser());
