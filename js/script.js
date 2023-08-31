@@ -15,7 +15,7 @@ const colorizeElement = (element) => setInterval(() => {
     if (currentColor == rainbow.length-1) {
         currentColor = 0;
     }
-}, 350)
+}, 350);
 
 let darkMode = true;
 let newBackgroundColor = "";
@@ -30,10 +30,17 @@ const changeTheme = (output) => {
     output.innerText = `Modo ${darkMode? "Claro" : "Escuro"}`;
 }
 
-const JsConfetti = new JSConfetti()
+const h2 = document.getElementsByTagName('h2')[0];
+const greetUser = () => {
+    h2.innerText = darkMode? "Boa Noite!" : "Bom Dia!"
+    setTimeout(() => h2.innerText = "Botões!", 2000)
+}
 
+
+const JsConfetti = new JSConfetti()
 const buttons = document.getElementsByTagName('button');
 
 buttons[0].addEventListener('click', () => colorizeElement(buttons[0]));
 buttons[1].addEventListener('click', () => changeTheme(buttons[1]));
 buttons[2].addEventListener('click', () => JsConfetti.addConfetti());
+buttons[3].addEventListener('click', () => greetUser());
