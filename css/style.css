@@ -48,3 +48,8 @@ button{
     transition: all 0.5s;
     margin-bottom: 40px;
 }
+
+#hoveringBtn:hover{
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+}
