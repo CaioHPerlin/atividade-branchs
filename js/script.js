@@ -1,5 +1,6 @@
 const btn1 = document.getElementById('btn1');
 const btn2 = document.getElementById('btn2');
+const btn3 = document.getElementById('btn3');
 let darkMode = true;
 
 const rainbow = [
@@ -12,7 +13,6 @@ const rainbow = [
     "#DD58D6",
 ];
 
-btn1.innerText = 'Colorizar';
 let currentColor = 0;
 btn1.addEventListener('click', () => setInterval(() => {
     btn1.style.color = `${rainbow[currentColor]}`;
@@ -34,3 +34,4 @@ btn2.addEventListener('click', () => {
     document.body.style.color = newPrimaryColor;
     btn2.innerText = `Modo ${darkMode? "Claro" : "Escuro"}`;
 });
+
