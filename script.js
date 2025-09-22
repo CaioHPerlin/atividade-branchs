@@ -4,6 +4,12 @@ document.getElementById("addBtn").addEventListener("click", () => {
   if (texto !== "") {
     const li = document.createElement("li");
     li.textContent = texto;
+
+    const deleteBtn = document.createElement("button");
+    deleteBtn.textContent = "Remover";
+    deleteBtn.style.marginLeft = "10px";
+    li.appendChild(deleteBtn);
+
     document.getElementById("list").appendChild(li);
     input.value = "";
   }
