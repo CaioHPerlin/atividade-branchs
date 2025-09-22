@@ -25,3 +25,8 @@ document.getElementById("addBtn").addEventListener("click", () => {
     input.value = "";
   }
 });
+
+document.getElementById("clearBtn").addEventListener("click", () => {
+  const list = document.getElementById("list");
+  list.innerHTML = "";
+});
