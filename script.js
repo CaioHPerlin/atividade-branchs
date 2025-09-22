@@ -1,5 +1,11 @@
+const updateTaskCount = () => {
+  const count = document.getElementById("list").children.length;
+  document.getElementById("taskCount").textContent = count;
+};
+
 const deleteTask = (li) => {
   li.remove();
+  updateTaskCount();
 };
 
 document.getElementById("addBtn").addEventListener("click", () => {
@@ -23,10 +29,12 @@ document.getElementById("addBtn").addEventListener("click", () => {
 
     document.getElementById("list").appendChild(li);
     input.value = "";
+    updateTaskCount();
   }
 });
 
 document.getElementById("clearBtn").addEventListener("click", () => {
   const list = document.getElementById("list");
   list.innerHTML = "";
+  updateTaskCount();
 });
