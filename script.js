@@ -17,6 +17,9 @@ document.getElementById("addBtn").addEventListener("click", () => {
     });
 
     li.appendChild(deleteBtn);
+    li.addEventListener("click", () => {
+      li.classList.toggle("completed");
+    });
 
     document.getElementById("list").appendChild(li);
     input.value = "";
